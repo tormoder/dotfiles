@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+set -x
+export GOROOT_BOOTSTRAP=~/go
+cd ~/go-dev
+git pull
+cd src
+./all.bash

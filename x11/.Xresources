@@ -1,0 +1,58 @@
+! Cursor
+Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.size: 16
+
+!Xft
+Xft.antialias: true
+Xft.autohint: true
+Xft.dpi: 96 
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+! General
+URxvt*termName:  rxvt-256color
+URxvt*loginShell:         true
+URxvt*scrollBar:         false
+URxvt*secondaryScroll:    true
+URxvt*saveLines:         65535
+URxvt*cursorBlink:       false
+URxvt*urgentOnBell:       true
+!URxvt*override-redirect:false
+!URxvt*borderLess:       false
+!URxvt*internalBorder:       0
+!URxvt*externalBorder:       0
+ 
+! Extensions
+URxvt*perl-lib: /usr/lib/URxvt/perl/
+URxvt*perl-ext-common: default,matcher,searchable-scrollback,clipboard-osc
+URxvt*urlLauncher: firefox
+URxvt*matcher.button: 1
+ 
+! Appearance
+
+!  - use xft for drawing fonts
+URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:RegularForPowerline:size=10
+
+URxvt.keysym.C-M-0: command:\033]710;xft:Source\ Code\ Pro\ for\ Powerline:RegularForPowerline:size=10\007
+URxvt.keysym.C-M-1: command:\033]710;xft:Source\ Code\ Pro\ for\ Powerline:RegularForPowerline:size=11\007
+URxvt.keysym.C-M-2: command:\033]710;xft:Source\ Code\ Pro\ for\ Powerline:RegularForPowerline:size=12\007
+URxvt.keysym.C-M-3: command:\033]710;xft:Source\ Code\ Pro\ for\ Powerline:RegularForPowerline:size=13\007
+URxvt.keysym.C-M-4: command:\033]710;xft:Source\ cODE\ pro\ for\ Powerline:RegularForPowerline:size=14\007
+
+URxvt*utf8: true
+
+!  - cursor
+URxvt*cursorColor: #DCDCCC
+!  - pseudo transparency
+!URxvt*shading:    50
+!URxvt*transparent:true
+
+! COLORS
+
+
+! Current
+!#include ".xcolors/astromouse"
+#include ".xcolors/dark"
+!#include ".xcolors/solarized"

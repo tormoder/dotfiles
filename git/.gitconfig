@@ -1,0 +1,32 @@
+[user]
+	name = Tormod Erevik Lea
+	email = tormodlea@gmail.com
+	editor = vim
+	signingkey = 18136270
+
+[core]
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
+	pager = /usr/bin/less
+
+[merge]
+	tool = meld 
+
+[diff]
+	tool = meld
+
+[color]
+	ui = true
+
+[push]
+	default = simple
+[http]
+	cookiefile = /home/tormod/.gitcookies
+
+[alias]
+	change = codereview change
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	submit = codereview submit
+	sync = codereview sync
