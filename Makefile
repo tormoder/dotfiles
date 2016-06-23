@@ -5,7 +5,7 @@ all: base gui
 base: zsh vim git gpg dircolors bin vundle 
 
 .PHONY: gui
-gui: x11 awesome xdg xcolors wallpapers fonts zathura kde
+gui: x11 awesome xdg xcolors kde wallpapers fonts zathura
 
 # base
 
@@ -94,6 +94,10 @@ submodules:
 updatesubmod:
 	git submodule foreach git checkout master	
 	git submodule foreach git pull 
+
+.PHONY: unstowall
+unstowall:
+	stow -D zsh vim git gpg dircolors bin vundle x11 awesome xdg xcolors kde wallpapers fonts zathura
 
 .PHONY: stow 
 stow:
