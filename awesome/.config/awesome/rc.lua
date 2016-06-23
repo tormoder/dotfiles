@@ -74,11 +74,15 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 
-tags = {}
+tags = {
+	names_s1 = { "1", "2", "3", "4", "5", "6", "7", "8" },
+	names_s2 = { "1", "2", "3", "4", "5", "6", "7", "8" },
+	layout_s1 = { layouts[1], layouts[1], layouts[7], layouts[7], layouts[7], layouts[7], layouts[7], layouts[7] },
+	layout_s2 = { layouts[1], layouts[1], layouts[1], layouts[1], layouts[7], layouts[7], layouts[7], layouts[7] }
+}
 
-for s = 1, screen.count() do
-	tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
-end
+tags[1] = awful.tag(tags.names_s1, 1, tags.layout_s1)
+tags[2] = awful.tag(tags.names_s2, 2, tags.layout_s2)
 
 -- }}}
 

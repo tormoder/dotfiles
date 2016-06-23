@@ -7,7 +7,7 @@ local naughty = require("naughty")
 local wibox = require("wibox")
 local vicious = require("vicious")
 
--- {{{ Reusable separator L
+-- {{{ Reusable separator
 separator = wibox.widget.textbox()
 separator:set_text(" ")
 -- }}}
@@ -25,31 +25,25 @@ separator_r:set_text(" ] ")
 -- {{{ CPU usage and temperature
 cputext = wibox.widget.textbox()
 cputext:set_text("cpu: ")
-
-cpuicon = wibox.widget.imagebox()
-cpuicon:set_image(beautiful.widget_cpu)
 -- Initialize widgets
-cpugraph  = awful.widget.graph()
+--cpugraph  = awful.widget.graph()
 tzswidget = wibox.widget.textbox()
 -- Graph properties
-cpugraph:set_width(40):set_height(14)
-cpugraph:set_background_color(beautiful.bg_widget)
-cpugraph:set_color(beautiful.fg_cpugraph)
--- cpugraph:set_gradient_angle(0):set_gradient_colors({
--- beautiful.fg_end_widget, beautiful.fg_center_widget, beautiful.fg_widget
--- })
+--cpugraph:set_width(40):set_height(14)
+--cpugraph:set_background_color(beautiful.bg_widget)
+--cpugraph:set_color(beautiful.fg_cpugraph)
+--cpugraph:set_gradient_angle(0):set_gradient_colors({
+--beautiful.fg_end_widget, beautiful.fg_center_widget, beautiful.fg_widget
+--})
 -- Register widgets
 --vicious.register(cpugraph,  vicious.widgets.cpu,      "$1")
-vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone1", "sys" } )
+vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone2", "sys"} )
 -- }}}
 
 --- {{{ Memory usage
 memtext = wibox.widget.textbox()
 memtext:set_text("mem: ")
 
---memicon = wibox.widget.imagebox()
---memicon:set_image(beautiful.widget_mem)
---
 -- Initialize widget
 membar = awful.widget.progressbar()
 -- Pogressbar properties
@@ -57,29 +51,23 @@ membar:set_vertical(true):set_ticks(true)
 membar:set_height(12):set_width(8):set_ticks_size(2)
 membar:set_background_color(beautiful.bg_widget)
 membar:set_color(beautiful.fg_membar)
--- membar:set_gradient_colors({ beautiful.fg_widget,
--- beautiful.fg_center_widget, beautiful.fg_end_widget
--- }) 
+--membar:set_gradient_colors({ beautiful.fg_widget,
+--beautiful.fg_center_widget, beautiful.fg_end_widget
+--})
 -- Register widget
 vicious.register(membar, vicious.widgets.mem, "$1", 13)
 -- }}}
 
-
---- wlp2s0 up/down
-wlantext = wibox.widget.textbox()
-wlantext:set_text("wlp2s0b10: ")
-dnicon = wibox.widget.imagebox()
-upicon = wibox.widget.imagebox()
-dnicon:set_image(beautiful.widget_down)
-upicon:set_image(beautiful.widget_up)
+--- eth0 & wlan0 up/down
+ethtext = wibox.widget.textbox()
+ethtext:set_text(" eth0: ")
 -- Initialize widget
-wlanwidget = wibox.widget.textbox()
+ethwidget = wibox.widget.textbox()
 -- Register widget
-vicious.register(wlanwidget, vicious.widgets.net, '<span color="'
-   .. beautiful.fg_netdn_widget ..'">${wlp2s0b1 down_kb}</span> <span color="'
-   .. beautiful.fg_netup_widget ..'">${wlp2s0b1 up_kb}</span>', 3)
+vicious.register(ethwidget, vicious.widgets.net, '<span color="'
+    .. beautiful.fg_netdn_widget ..'">${eth0 down_kb}</span> <span color="'
+    .. beautiful.fg_netup_widget ..'">${eth0 up_kb}</span>', 3)
 -- }}}
-
 
 --- volume info
 volicon = wibox.widget.imagebox()
@@ -91,7 +79,6 @@ volbar:set_height(18)
 volbar:set_vertical(true)
 volbar:set_background_color(beautiful.bg_widget)
 volbar:set_color(beautiful.fg_volbar)
--- volbar:set_gradient_colors({ "#1a1918", "#60801f", "#9acd32" })
 vicious.register(volbar, vicious.widgets.volume,function (widgets, args)
  			if args[1] == 0 or args[2] == "♩" then
  				volicon:set_image(beautiful.widget_mute)
@@ -101,15 +88,6 @@ vicious.register(volbar, vicious.widgets.volume,function (widgets, args)
  				return args[1]
  			end
 		end,  2, "Master")
-
--- {{{ Battery state
-baticon = wibox.widget.imagebox()
-baticon:set_image(beautiful.widget_bat)
--- Initialize widget
-batwidget = wibox.widget.textbox()
--- Register widget
-vicious.register(batwidget, vicious.widgets.bat, "$1$2%", 61, "BAT0")
--- }}}
 
 -- {{{ Wibox
 -- Create a textclock widget
@@ -189,16 +167,19 @@ for s = 1, screen.count() do
     local left_layout = wibox.layout.fixed.horizontal()
     left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
+    left_layout:add(separator)
     left_layout:add(mylayoutbox[s])
     left_layout:add(separator)
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    if s == 1 then right_layout:add(wibox.widget.systray()) end
+    if s == 1 then
+	right_layout:add(wibox.widget.systray())
+	right_layout:add(separator)
+    end
     right_layout:add(separator_l)
     right_layout:add(cputext)
-    --right_layout:add(cpugraph)
     right_layout:add(tzswidget)
     right_layout:add(separator_r)
     right_layout:add(separator_l)
@@ -206,12 +187,8 @@ for s = 1, screen.count() do
     right_layout:add(membar)
     right_layout:add(separator_r)
     right_layout:add(separator_l)
-    right_layout:add(wlantext)
-    right_layout:add(wlanwidget)
-    right_layout:add(separator_r)
-    right_layout:add(separator_l)
-    right_layout:add(baticon)
-    right_layout:add(batwidget)
+    right_layout:add(ethtext)
+    right_layout:add(ethwidget)
     right_layout:add(separator_r)
     right_layout:add(separator_l)
     right_layout:add(volicon)

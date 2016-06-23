@@ -16,7 +16,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 			    { "thunar", "thunar" },
 			    { "spotify", "spotify"},
 			    { "terminal", terminal },
-			    { "wifi", "cmst" },
 			    { "vim", vim},
 			    { "reboot", "systemctl reboot" },
 			    { "shutdown", "systemctl poweroff" }

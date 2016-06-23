@@ -17,7 +17,6 @@ plugins=(git archlinux lol ssh-agent golang systemd vundle)
 eval $(dircolors -b ~/.dir_colors)
 
 # aliases
-alias wifi=cmst
 alias gotip=$HOME/go-dev/bin/go
 
 # init oh-my-zsh

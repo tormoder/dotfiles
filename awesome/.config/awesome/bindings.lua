@@ -72,7 +72,6 @@ awful.key({ modkey }, "x",
 	  awful.util.getdir("cache") .. "/history_eval")
       end),
 
-
 -- Lock
 awful.key({ modkey }, "F12",
        function () 
