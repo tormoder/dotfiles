@@ -54,7 +54,7 @@ xcolors:
 .PHONY: kde 
 kde:
 	stow kde 
-	ln -s ~/dotfiles/kde/.kde4/share/apps/konsole ~/.local/share/
+	ln -sf ~/dotfiles/kde/.kde4/share/apps/konsole ~/.local/share/
 
 .PHONY: wallpapers 
 wallpapers:
