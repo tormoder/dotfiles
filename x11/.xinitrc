@@ -18,6 +18,8 @@ if ! pulseaudio --check; then
 	pulseaudio --start
 fi
 
+/usr/bin/dropbox &
+
 /usr/bin/xscreensaver -no-splash &
 
 xbindkeys
