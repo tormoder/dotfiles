@@ -21,3 +21,7 @@ alias gotip=$HOME/go-dev/bin/go
 
 # init oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+HISTFILE=~/Dropbox/history/.zsh_history_workstation
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
