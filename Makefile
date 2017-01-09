@@ -64,6 +64,10 @@ wallpapers:
 fonts: submodules
 	stow fonts  
 
+.PHONY: fontconfig
+fontconfig: configbak
+	stow fontconfig
+
 .PHONY: zathura 
 zathura: configbak
 	stow zathura 
@@ -74,6 +78,7 @@ zathura: configbak
 configbak:
 	cp -r ~/.config ~/.config-bak
 	rm -rf ~/.config-bak/awesome
+	rm -rf ~/.config-bak/fontconfig
 	rm -rf ~/.config-bak/zathura
 	rm -f ~/.config-bak/user-dirs.*
 
