@@ -22,7 +22,7 @@ tzswidget = wibox.widget.textbox()
 vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone2", "sys"} )
 
 --- memory
-memtet = wibox.widget.textbox()
+memtext = wibox.widget.textbox()
 memtext:set_text("mem: ")
 
 membar = wibox.widget {
