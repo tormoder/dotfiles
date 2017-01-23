@@ -217,7 +217,7 @@ awful.screen.connect_for_each_screen(function(s)
 	    tzswidget,
 	    separator_r,
 	    separator_l,
-	    kemtext,
+	    memtext,
 	    membarr,
 	    separator_r,
 	    separator_l,
