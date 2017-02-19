@@ -19,7 +19,7 @@ cputext = wibox.widget.textbox()
 cputext:set_text("cpu: ")
 
 tzswidget = wibox.widget.textbox()
-vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone2", "sys"} )
+vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone1", "sys"} )
 
 --- memory
 memtext = wibox.widget.textbox()
