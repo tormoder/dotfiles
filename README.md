@@ -9,6 +9,6 @@ Dependencies:
 Branches:
 
 * workstation
-* mba
+* mba (Old, inactive)
 
 See Makefile for details.
