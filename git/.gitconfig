@@ -20,6 +20,7 @@
 
 [push]
 	default = simple
+
 [http]
 	cookiefile = /home/tormod/.gitcookies
 
