@@ -1,76 +1,76 @@
 .PHONY: all
-all: base gui 
+all: base gui
 
-.PHONY: base 
-base: zsh vim git gpg dircolors bin vundle 
+.PHONY: base
+base: zsh vim git gpg dircolors bin vundle
 
 .PHONY: gui
 gui: x11 awesome xdg xcolors kde wallpapers fonts zathura
 
 # base
 
-.PHONY: zsh 
+.PHONY: zsh
 zsh: submodules
 	stow zsh
 
-.PHONY: vim 
+.PHONY: vim
 vim: submodules
-	stow vim 
+	stow vim
 
-.PHONY: git 
+.PHONY: git
 git:
-	stow git 
+	stow git
 
-.PHONY: gpg 
+.PHONY: gpg
 gpg:
-	stow gpg 
+	stow gpg
 
-.PHONY: dircolors 
+.PHONY: dircolors
 dircolors:
-	stow dircolors 
+	stow dircolors
 
-.PHONY: bin 
+.PHONY: bin
 bin:
-	stow bin 
+	stow bin
 
 # gui
 
-.PHONY: x11 
+.PHONY: x11
 x11:
-	stow x11 
+	stow x11
 
-.PHONY: awesome 
+.PHONY: awesome
 awesome: configbak
-	stow awesome 
+	stow awesome
 
-.PHONY: xdg 
+.PHONY: xdg
 xdg: configbak
-	stow xdg 
+	stow xdg
 
-.PHONY: xcolors 
+.PHONY: xcolors
 xcolors:
-	stow xcolors 
+	stow xcolors
 
-.PHONY: kde 
+.PHONY: kde
 kde:
-	stow kde 
+	stow kde
 	ln -sf ~/dotfiles/kde/.kde4/share/apps/konsole ~/.local/share/
 
-.PHONY: wallpapers 
+.PHONY: wallpapers
 wallpapers:
-	stow wallpapers 
+	stow wallpapers
 
 .PHONY: fonts
 fonts: submodules
-	stow fonts  
+	stow fonts
 
 .PHONY: fontconfig
 fontconfig: configbak
 	stow fontconfig
 
-.PHONY: zathura 
+.PHONY: zathura
 zathura: configbak
-	stow zathura 
+	stow zathura
 
 # misc 
 
@@ -95,15 +95,15 @@ submodules:
 	git submodule init
 	git submodule update
 
-.PHONY: updatesubmod 
+.PHONY: updatesubmod
 updatesubmod:
-	git submodule foreach git checkout master	
-	git submodule foreach git pull 
+	git submodule foreach git checkout master
+	git submodule foreach git pull
 
 .PHONY: unstowall
 unstowall:
 	stow -D zsh vim git gpg dircolors bin vundle x11 awesome xdg xcolors kde wallpapers fonts zathura
 
-.PHONY: stow 
+.PHONY: stow
 stow:
 	sudo pacman -S stow
