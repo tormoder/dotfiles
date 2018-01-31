@@ -8,11 +8,8 @@ if [ -f "$HOME/.Xresources" ]; then
 	xrdb -merge $HOME/.Xresources
 fi
 
-# disable CapsLock & map to Escape
-setxkbmap -option caps:swapescape
-
-# set norwegian layout
-setxkbmap -layout "no"
+# switch caps lock and escape + set norwegian layout
+setxkbmap -option caps:swapescape -layout "no"
 
 if ! pulseaudio --check; then
 	pulseaudio --start
