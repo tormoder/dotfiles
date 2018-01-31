@@ -24,4 +24,4 @@ xbindkeys
 
 feh --bg-fill --randomize ~/.wallpapers/* &
 
-exec dbus-launch awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
+exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
