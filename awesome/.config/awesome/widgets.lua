@@ -21,35 +21,6 @@ cputext:set_text("cpu: ")
 tzswidget = wibox.widget.textbox()
 vicious.register(tzswidget, vicious.widgets.thermal, " $1°C", 20, { "thermal_zone2", "sys"} )
 
---- memory
-memtext = wibox.widget.textbox()
-memtext:set_text("mem: ")
-
-membar = wibox.widget {
-	ticks                   = true,
-	ticks_size              = 2,
-	forced_height           = 10,
-	forced_width            = 20,
-	background_color        = beautiful.bg_widget,
-	color                   = beautiful.fg_membar,
-	widget                  = wibox.widget.progressbar,
-}
-vicious.register(membar, vicious.widgets.mem, "$1", 13)
-membarr = wibox.container.rotate(membar, "east")
-
---- eth0 & wlan0 up/down
-ethtext = wibox.widget {
-	text = " wlan0: ",
-	widget = wibox.widget.textbox,
-}
-
-ethwidget = wibox.widget.textbox()
-vicious.register(
-ethwidget, vicious.widgets.net, '<span color="'
-.. beautiful.fg_netdn_widget ..'">${wlan0 down_kb}</span> <span color="'
-.. beautiful.fg_netup_widget ..'">${wlan0 up_kb}</span>', 3
-)
-
 --- volume info
 volicon = wibox.widget.imagebox()
 volicon:set_image(beautiful.widget_vol)
