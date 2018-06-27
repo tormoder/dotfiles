@@ -11,10 +11,6 @@ fi
 # switch caps lock and escape + set norwegian layout
 setxkbmap -option caps:swapescape -layout "no"
 
-if ! pulseaudio --check; then
-	pulseaudio --start
-fi
-
 /usr/bin/xscreensaver -no-splash &
 
 xbindkeys
