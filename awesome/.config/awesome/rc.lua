@@ -107,6 +107,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
    { "chromium", "chromium" },
+   { "intellij", "intellij-idea-ultimate-edition" },
    { "thunar", "thunar" },
    { "spotify", "spotify"},
    { "terminal", terminal },
