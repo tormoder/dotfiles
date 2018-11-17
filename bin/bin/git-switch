@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case "$1" in
+'private')
+git config --global user.name "Tormod Erevik Lea"
+git config --global user.email tormodlea@gmail.com
+;;
+'finn')
+git config --global user.name "Tormod Erevik Lea"
+git config --global user.email tormod.erevik.lea@finn.no
+;;
+*)
+git config --global user.name "Tormod Erevik Lea"
+git config --global user.email tormodlea@gmail.com
+;;
+esac
+
+git config --global user.name
+git config --global user.email
