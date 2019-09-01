@@ -34,13 +34,10 @@
 		Plugin 'airblade/vim-gitgutter'
 		Plugin 'kien/ctrlp.vim'
 		Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
-
-"		Plugin 'sjl/gundo.vim'
-"		Plugin 'godlygeek/tabular'
+		Plugin 'junegunn/fzf.vim'
 	"}
 
 	" Github, vim-scripts.org {
-		Plugin 'FuzzyFinder'
 		Plugin 'L9'
 		Plugin 'TaskList.vim'
 	"}
