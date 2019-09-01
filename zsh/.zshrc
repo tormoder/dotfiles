@@ -11,7 +11,7 @@ ZSH_THEME="steeef-dark"
 DISABLE_AUTO_UPDATE="true"
 
 # plugins
-plugins=(git archlinux ssh-agent golang systemd vundle docker kubectl)
+plugins=(git archlinux ssh-agent golang systemd vundle docker kubectl fzf)
 
 # dircolors
 eval $(dircolors -b ~/.dir_colors)
