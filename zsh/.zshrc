@@ -19,8 +19,10 @@ eval $(dircolors -b ~/.dir_colors)
 # aliases
 alias gotip=$HOME/go-dev/bin/go
 
-# private kubectl aliases
+# finn
 source $HOME/.kubectl_aliases
+source $HOME/.arti
+source $HOME/.finn
 
 # init oh-my-zsh
 source $ZSH/oh-my-zsh.sh
