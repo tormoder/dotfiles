@@ -21,6 +21,9 @@
 [push]
 	default = simple
 
+[pull]
+	rebase = false
+
 [http]
 	cookiefile = /home/tormod/.gitcookies
 
