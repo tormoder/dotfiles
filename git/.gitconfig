@@ -2,7 +2,6 @@
 	name = Tormod Erevik Lea
 	email = tormodlea@gmail.com
 	editor = vim
-	signingkey = 18136270
 
 [core]
 	autocrlf = input
