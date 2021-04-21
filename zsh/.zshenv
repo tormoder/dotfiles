@@ -5,7 +5,7 @@ export FCEDIT="$EDITOR"
 export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
 export SYSTEMD_PAGER="less -j4aR"
-export BROWSER="/usr/bin/chromium"
+export BROWSER="/bin/google-chrome-stable"
 export GOPATH=$HOME
 
 gocd () { cd `go list -f '{{.Dir}}' $1` }
