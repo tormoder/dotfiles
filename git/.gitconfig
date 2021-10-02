@@ -1,6 +1,6 @@
 [user]
 	name = Tormod Erevik Lea
-	email = tormodlea@gmail.com
+	email = tormod.lea@laerdal.com
 	editor = vim
 
 [core]
@@ -33,3 +33,6 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

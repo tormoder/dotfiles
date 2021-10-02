@@ -6,9 +6,4 @@ Dependencies:
 * make
 * stow
 
-Branches:
-
-* workstation
-* mba (Old, inactive)
-
 See Makefile for details.

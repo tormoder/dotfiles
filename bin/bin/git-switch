@@ -5,13 +5,13 @@ case "$1" in
 git config --global user.name "Tormod Erevik Lea"
 git config --global user.email tormodlea@gmail.com
 ;;
-'finn')
+'laerdal')
 git config --global user.name "Tormod Erevik Lea"
-git config --global user.email tormod.erevik.lea@finn.no
+git config --global user.email tormod.lea@laerdal.com
 ;;
 *)
 git config --global user.name "Tormod Erevik Lea"
-git config --global user.email tormodlea@gmail.com
+git config --global user.email tormod.lea@laerdal.com
 ;;
 esac
 

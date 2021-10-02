@@ -1,6 +1,6 @@
 [submodule "awesome/.config/awesome/vicious"]
 	path = awesome/.config/awesome/vicious
-	url = http://git.sysphere.org/vicious
+	url = git@github.com:vicious-widgets/vicious.git
 [submodule "fonts/.fonts"]
 	path = fonts/.fonts
 	url = git@github.com:powerline/fonts.git
@@ -8,5 +8,5 @@
 	path = zsh/.oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule "vim/.vim/bundle/Vundle.vim"]
-	path = vim/.vim/bundle/Vundle.vim
+	path = vim/.vim/plugin/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git

@@ -5,8 +5,10 @@ export FCEDIT="$EDITOR"
 export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
 export SYSTEMD_PAGER="less -j4aR"
-export BROWSER="/usr/bin/chromium"
+export BROWSER="/usr/bin/google-chrome-stable"
 export GOPATH=$HOME
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
 
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 

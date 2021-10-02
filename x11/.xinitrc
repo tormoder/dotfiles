@@ -11,8 +11,6 @@ fi
 # switch caps lock and escape + set norwegian layout
 setxkbmap -option caps:swapescape -layout "no"
 
-/usr/bin/xscreensaver -no-splash &
-
 xbindkeys
 
 feh --bg-fill --randomize ~/.wallpapers/* &
