@@ -158,7 +158,7 @@ linters-settings:
         json: snake
         yaml: camel
         xml: camel
-        bson: camel
+        bson: snake 
         avro: snake
         mapstructure: kebab
 
