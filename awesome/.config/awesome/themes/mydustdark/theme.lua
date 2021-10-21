@@ -25,7 +25,7 @@ if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
        themes = sharedthemes
 end
 themedir      = themes .. themename
-theme.font          = "Droid Sans Mono for Powerline 10"
+theme.font          = "Droid Sans Mono for Powerline 11"
 -- }}}
 
 
