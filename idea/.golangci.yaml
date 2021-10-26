@@ -197,6 +197,7 @@ linters:
     - gosec
     - promlinter
     - tagliatelle
+    - thelper
     - unconvert
     - whitespace  
     - wrapcheck
