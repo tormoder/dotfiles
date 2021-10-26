@@ -195,7 +195,6 @@ linters:
     - errorlint
     - goconst
     - gosec
-    - prealloc
     - promlinter
     - tagliatelle
     - unconvert
