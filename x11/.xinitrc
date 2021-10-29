@@ -9,7 +9,7 @@ if [ -f "$HOME/.Xresources" ]; then
 fi
 
 # switch caps lock and escape + set norwegian layout
-setxkbmap -option caps:swapescape -layout "no"
+setxkbmap -option caps:swapescape -layout "no nodeadkeys"
 
 xbindkeys
 
