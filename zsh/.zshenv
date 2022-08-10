@@ -9,6 +9,7 @@ export BROWSER="/usr/bin/google-chrome-stable"
 export GOPATH=$HOME
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
+export MEMONGO_MONGOD_BIN=/usr/bin/mongod
 
 gocd () { cd `go list -f '{{.Dir}}' $1` }
 
