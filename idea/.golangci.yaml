@@ -187,9 +187,6 @@ linters-settings:
 linters:
   disable-all: true
   enable:
-    - deadcode
-    - structcheck
-    - varcheck
     - unused
     - govet
     - ineffassign
