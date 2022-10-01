@@ -16,14 +16,6 @@ plugins=(git archlinux ssh-agent golang systemd vundle docker kubectl fzf)
 # dircolors
 eval $(dircolors -b ~/.dir_colors)
 
-# aliases
-alias gotip=$HOME/go-dev/bin/go
-
-# finn
-source $HOME/.kubectl_aliases
-source $HOME/.arti
-source $HOME/.finn
-
 # init oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
