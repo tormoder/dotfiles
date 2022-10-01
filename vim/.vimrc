@@ -23,7 +23,7 @@
 
 	" github {
 		Plugin 'spolu/dwm.vim'
-		Plugin 'biochimia/vim-jslt'
+		Plugin 'jcf/vim-latex'
 		Plugin 'scrooloose/syntastic'
 		Plugin 'scrooloose/nerdtree'
 		Plugin 'tpope/vim-surround'
