@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=Dark
-Font=Droid Sans Mono Dotted for Powerline,11,-1,5,50,0,0,0,0,0
+Font=DejaVu Sans Mono,11,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=0
