@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Make sure this is before the 'exec' command or it won't be executed.
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+if [ -f "$HOME/.Xresources" ]; then
+	xrdb -merge $HOME/.Xresources
+fi
+
+dunst &
+
+# switch caps lock and escape + set norwegian layout
+setxkbmap -option caps:swapescape -layout "no"
+
+/usr/bin/xscreensaver -no-splash &
+
+feh --bg-fill ~/.wallpapers/sky.jpg &
+
+exec i3
