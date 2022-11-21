@@ -1,6 +1,3 @@
-[submodule "awesome/.config/awesome/vicious"]
-	path = awesome/.config/awesome/vicious
-	url = http://git.sysphere.org/vicious
 [submodule "fonts/.fonts"]
 	path = fonts/.fonts
 	url = git@github.com:powerline/fonts.git
