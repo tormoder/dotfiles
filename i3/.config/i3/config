@@ -11,6 +11,7 @@ set $borderpx 2
 
 set $primary HDMI-0
 set $secondary DP-0
+set $virtual Virtual1
 
 # border 
 default_border pixel $borderpx
@@ -125,16 +126,16 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-workspace $ws1  output $primary
-workspace $ws2  output $primary
-workspace $ws3  output $primary
-workspace $ws4  output $primary
-workspace $ws5  output $primary
-workspace $ws6  output $primary
-workspace $ws7  output $secondary  
-workspace $ws8  output $secondary  
-workspace $ws9  output $secondary  
-workspace $ws10 output $secondary  
+workspace $ws1  output $primary $virtual
+workspace $ws2  output $primary $virtual
+workspace $ws3  output $primary $virtual
+workspace $ws4  output $primary $virtual
+workspace $ws5  output $primary $virtual
+workspace $ws6  output $primary $virtual
+workspace $ws7  output $secondary $primary $virtual
+workspace $ws8  output $secondary $primary $virtual
+workspace $ws9  output $secondary $primary $virtual
+workspace $ws10 output $secondary $primary $virtual
 
 assign [class="Slack"]   $ws7
 assign [class="spotify"] $ws10
