@@ -23,17 +23,14 @@
 
 	" github {
 		Plugin 'spolu/dwm.vim'
-		Plugin 'jcf/vim-latex'
 		Plugin 'scrooloose/syntastic'
 		Plugin 'scrooloose/nerdtree'
 		Plugin 'tpope/vim-surround'
 		Plugin 'tpope/vim-fugitive'
 		Plugin 'tpope/vim-git'
 		Plugin 'Townk/vim-autoclose'
-		Plugin 'fatih/vim-go'
 		Plugin 'airblade/vim-gitgutter'
 		Plugin 'kien/ctrlp.vim'
-		Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 		Plugin 'junegunn/fzf.vim'
 	"}
 
@@ -309,42 +306,6 @@ if s:use_plugins
 	" }
 
 endif
-" }
-
-
-" Latex plugin {
-
-	" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-	" can be called correctly.
-	set shellslash
-
-	" IMPORTANT: grep will sometimes skip displaying the file name if you
-	" search in a singe file. This will confuse Latex-Suite. Set your grep
-	" program to always generate a file-name.
-	set grepprg=grep\ -nH\ $*
-
-	" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-	" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-	" The following changes the default filetype back to 'tex':
-	let g:tex_flavor='latex'
-
-	" Set LaTeX compile to pdf
-	let g:Tex_DefaultTargetFormat = 'pdf'
-	let g:Tex_MultipleCompileFormats='pdf, aux'
-
-	" Disable vim-autoclose with tex
-	autocmd FileType tex :AutoCloseOff
-
-" }
-
-" Go {
-	au FileType go nmap <leader>r <Plug>(go-run)
-	au FileType go nmap <leader>b <Plug>(go-build)
-	au FileType go nmap <leader>t <Plug>(go-test)
-	au FileType go nmap <leader>c <Plug>(go-coverage)
-	au FileType go nmap <Leader>e <Plug>(go-rename)
-
-	let g:go_fmt_command = "goimports"
 " }
 
 
