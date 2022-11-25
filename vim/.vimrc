@@ -1,33 +1,29 @@
 " --------------------------------------------------------------
 "
 " .vimrc
-" tormod erevik lea
+" tormoder
 "
 " (mostly modifactions of http://www.github.com/erikw/dotfiles)
 "
 " --------------------------------------------------------------
 
+" vim-plug install {
+	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+	if empty(glob(data_dir . '/autoload/plug.vim'))
+		silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+		autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	endif
+" }
 
 
-" vundle {
-	
-	let s:using_vundle = 1		" vundle will break default behaviour of spellfile. let others know when using vundle.
-	set nocompatible		" be improved.
-	filetype off 			" required!
 
-	set rtp+=~/.vim/bundle/Vundle.vim
-	call vundle#begin()
 
-	" let Vundle manage Vundle, required
-	Plugin 'VundleVim/Vundle.vim'
 
-	" github {
-		Plugin 'scrooloose/nerdtree'
-		Plugin 'airblade/vim-gitgutter'
-	"}
-
-	call vundle#end()            " required
-	filetype plugin indent on    " required
+" vim-plug {
+	call plug#begin()
+	Plug 'scrooloose/nerdtree'
+	Plug 'airblade/vim-gitgutter'
+	call plug#end()
 " }
 
 

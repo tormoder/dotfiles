@@ -2,9 +2,9 @@
 
 bin/bin/
 
-!vim/.vim/bundle/Vundle.vim
+vim/.vim/autoload
+vim/.vim/plugged
 vim/.vim/.netrwhist
-vim/.vim/bundle/
 vim/.vim/eclim/
 vim/.vim/fuf-data/*
 vim/.vim/undo/
