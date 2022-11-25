@@ -22,21 +22,8 @@
 	Plugin 'VundleVim/Vundle.vim'
 
 	" github {
-		Plugin 'spolu/dwm.vim'
-		Plugin 'scrooloose/syntastic'
 		Plugin 'scrooloose/nerdtree'
-		Plugin 'tpope/vim-surround'
-		Plugin 'tpope/vim-fugitive'
-		Plugin 'tpope/vim-git'
-		Plugin 'Townk/vim-autoclose'
 		Plugin 'airblade/vim-gitgutter'
-		Plugin 'kien/ctrlp.vim'
-		Plugin 'junegunn/fzf.vim'
-	"}
-
-	" Github, vim-scripts.org {
-		Plugin 'L9'
-		Plugin 'TaskList.vim'
 	"}
 
 	call vundle#end()            " required
@@ -274,37 +261,12 @@
 
 " Plugins {
 if s:use_plugins
-
-	" FuzzyFinder {
-		let g:fuf_dataDir = '~/.vim/fuf-data'			" Where to put stored data.
-		noremap <silent> ,f :FufFile<CR>			" Launch File-mode.
-		noremap <silent> ,b :FufBuffer<CR>			" Launch Buffer-mode.
-		noremap <silent> ,d :FufDir<CR>				" Launch Dir-mode.
-		noremap <silent> ,t :FufTag<CR>				" Launch Tag-mode
-		noremap <silent> ,tw :FufTagWithCursorWord<CR>		" Launch Tag-mode with current word.
-		noremap <silent> ,c :FufCoverageFile<CR>		" Launch with Filecoverage-mode.
-	" }
-
 	" NERDTree {
 		noremap <silent> <F2> :NERDTreeToggle<CR>	" Toggle the NERDTree file browser.
 		let g:NERDTreeCaseSensitiveSort=1		" Sort case sensitive.
 		let g:NERDTreeMouseMode=3			" Single click opens folders and files.
 		let g:NERDTreeQuitOnOpen=1			" Close tree after open.
 	" }
-
-	" Syntastic {
-		"let g:syntastic_check_on_open=0		" Don't automatically do syntax check on open buffers.
-	" }
-
-	" Tasklist {
-		nmap <Leader>T <Plug>TaskList		" Open TaskList. Default mapping interferes with Command-T.
-	" }
-
-	" CtrlP {
-		let g:ctrlp_map = '<c-p>'
-		let g:ctrlp_cmd = 'CtrlP'
-	" }
-
 endif
 " }
 
