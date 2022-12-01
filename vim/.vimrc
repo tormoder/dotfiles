@@ -23,6 +23,8 @@
 	call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 	call plug#end()
 " }
 
