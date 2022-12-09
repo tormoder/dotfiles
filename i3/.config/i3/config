@@ -1,5 +1,7 @@
 # i3 config
 
+
+
 font pango:DejaVu Sans Mono 12 
 
 set $mod Mod4
@@ -16,6 +18,13 @@ set $virtual Virtual1
 # border 
 default_border pixel $borderpx
 default_floating_border pixel $borderpx
+
+gaps inner 10
+gaps outer 10
+gaps horizontal 20
+gaps left 40
+gaps right 40
+gaps bottom 60
 
 # colors
 # class                 border  backgr. text    indicator child_border
