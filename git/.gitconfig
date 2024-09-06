@@ -2,6 +2,7 @@
 	name = Tormod Erevik Lea
 	email = tormodlea@gmail.com
 	editor = vim
+	signingkey = /home/tormod/.ssh/id_ed25519.pub
 
 [core]
 	autocrlf = input
@@ -37,3 +38,12 @@
 
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
