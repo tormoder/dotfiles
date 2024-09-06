@@ -162,5 +162,5 @@ bindsym $mod+t   exec --no-startup-id exec thunar
 exec --no-startup-id dunst
 exec --no-startup-id picom -b
 exec --no-startup-id xscreensaver -no-splash
-exec --no-startup-id feh --bg-fill ~/.wallpapers/sky.jpg
+exec --no-startup-id feh --bg-fill ~/.wallpapers/poly.jpg
 exec_always --no-startup-id $HOME/bin/launch-polybar.sh
