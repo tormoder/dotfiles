@@ -25,3 +25,5 @@ kde/.kde4/
 !kde/.kde4/share/apps/konsole/*
 
 wallpapers/.wallpapers/sky.jpg
+
+git/.gitconfig.local

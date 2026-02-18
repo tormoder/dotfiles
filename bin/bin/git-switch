@@ -1,17 +1,16 @@
 #!/bin/bash
 
+LOCAL_CONFIG="$HOME/.gitconfig.local"
+
 case "$1" in
 'private')
-git config --global user.name "Tormod Erevik Lea"
-git config --global user.email tormodlea@gmail.com
+git config --file "$LOCAL_CONFIG" user.email tormodlea@gmail.com
 ;;
 'laerdal')
-git config --global user.name "Tormod Erevik Lea"
-git config --global user.email tormod.lea@laerdal.com
+git config --file "$LOCAL_CONFIG" user.email tormod.lea@laerdal.com
 ;;
 *)
-git config --global user.name "Tormod Erevik Lea"
-git config --global user.email tormodlea@gmail.com
+git config --file "$LOCAL_CONFIG" user.email tormodlea@gmail.com
 ;;
 esac
 
