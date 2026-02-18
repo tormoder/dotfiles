@@ -123,6 +123,8 @@
 		endif
 	elseif ( &term == "linux" )
 		colorscheme miro8
+	elseif ( &term == "xterm-ghostty")
+		colorscheme miromiro
 	else	
 		colorscheme elflord 
 	endif
