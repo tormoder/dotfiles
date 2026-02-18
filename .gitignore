@@ -16,7 +16,9 @@ vim/.vim/viminfo.tmp
 vim/.vim/yankring_v2.txt
 
 .config
+!.config/aerospace
 !.config/awesome
+!.config/aerospace
 !.config/zathura
 !.config/user-dirs.dirs
 !.config/user-dirs.locale

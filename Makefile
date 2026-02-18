@@ -39,6 +39,10 @@ bin:
 x11:
 	stow x11
 
+.PHONY: aerospace
+aerospace:
+	stow aerospace
+
 .PHONY: awesome
 awesome: configbak
 	stow awesome
